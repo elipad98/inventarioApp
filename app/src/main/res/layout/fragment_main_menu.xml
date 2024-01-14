@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainMenu">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="397dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="36dp"
+        android:text="Agregar Producto"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_edith"
+        />
+
+    <Button
+        android:id="@+id/btn_edith"
+        android:layout_width="397dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="40dp"
+        android:text="Editar Producto"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add"
+        app:layout_constraintBottom_toTopOf="@+id/btn_remove"
+        />
+
+    <Button
+        android:id="@+id/btn_remove"
+        android:layout_width="397dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="40dp"
+        android:text="Remover Producto"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_edith"
+        app:layout_constraintBottom_toTopOf="@id/btn_show_one"
+        />
+
+    <Button
+        android:id="@+id/btn_show_one"
+        android:layout_width="397dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="48dp"
+        android:text="Mostrar un Producto"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_show_all"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_remove" />
+
+    <Button
+        android:id="@+id/btn_show_all"
+        android:layout_width="397dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="44dp"
+        android:text="Mostrar Productos"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_show_one" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
