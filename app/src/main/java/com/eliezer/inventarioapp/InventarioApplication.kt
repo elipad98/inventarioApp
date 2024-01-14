@@ -7,12 +7,4 @@ import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
 class InventarioApplication:Application() {
-    companion object{
-        lateinit var database: DbProduct
-    }
-    override fun onCreate(){
-        super.onCreate()
-        database = Room.databaseBuilder(this, DbProduct::class.java,"products-db").build()
-
-    }
 }

@@ -25,12 +25,9 @@ class ProductViewModel @Inject constructor(private val repository: ProductReposi
         print(product)
         print("si entro")
         viewModelScope.launch{
-             repository.insertProduct(product).catch {
-
-            }.collect{
+             repository.insertProduct(product).collect{
 
              }
-
         }
     }
 

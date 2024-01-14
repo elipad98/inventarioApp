@@ -10,23 +10,21 @@ import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
 @ActivityRetainedScoped
-class ProductRepository () {
-    lateinit var productDao:ProductDao
-    fun getOneProduct(name:String):Flow<Product>{
+class ProductRepository @Inject constructor(private val productDao: ProductDao) {
+    fun getOneProduct(name: String): Flow<Product> {
         return productDao.getOne(name)
     }
+
     fun getAllProducts(): Flow<List<Product>> =
         productDao.getAll()
 
-    suspend fun insertProduct(product: Product):Flow<Boolean> =
+    suspend fun insertProduct(product: Product): Flow<Boolean> =
         flow {
             print("mensaje antes de insert")
-            val insertProd= productDao.insert(product)
+            val insertProd = productDao.insert(product)
             println(insertProd)
             emit(true)
         }.flowOn(Dispatchers.IO)
-
-
 
 
 }
